@@ -1,0 +1,3 @@
+[submodule "raw/sub_wiki/llm-wiki-historial-clases"]
+	path = raw/sub_wiki/llm-wiki-historial-clases
+	url = https://github.com/JoseMichaeli/llm-wiki-historial-clases.git
