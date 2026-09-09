@@ -153,6 +153,109 @@ modifican durante el traslado.
 
 ## Entradas
 
+## LOG-20260908-02 — Sincronización: pack Login en llm-wiki-historial-clases
+
+- **Fecha:** 2026-09-08
+- **Tipos:** `source`, `knowledge`, `synthesis`, `navigation`, `conflict`
+- **Responsable:** Agente, bajo dirección de la persona usuaria
+- **Motivo:** Tarea `@sincronizar` contra la rama remota de seguimiento
+  `origin/main`.
+- **Archivos afectados:**
+  - [`sources/llm-wiki-historial-clases.md`](sources/llm-wiki-historial-clases.md)
+  - [`projects/avatar-apoyo-educativo-usach-virtual.md`](projects/avatar-apoyo-educativo-usach-virtual.md)
+  - [`organizations/usach-virtual.md`](organizations/usach-virtual.md)
+  - [`concepts/login.md`](concepts/login.md)
+  - [`concepts/tipo-usuario.md`](concepts/tipo-usuario.md)
+  - [`concepts/flujo-profesor.md`](concepts/flujo-profesor.md)
+  - [`concepts/flujo-estudiante.md`](concepts/flujo-estudiante.md)
+  - [`concepts/historial-clases.md`](concepts/historial-clases.md)
+  - [`concepts/historial-tutorias.md`](concepts/historial-tutorias.md)
+  - [`decisions/alcance-iteracion-login.md`](decisions/alcance-iteracion-login.md)
+  - [`requirements/login-pantalla.md`](requirements/login-pantalla.md)
+  - [`processes/ingresar-al-sistema-desde-login.md`](processes/ingresar-al-sistema-desde-login.md)
+  - [`processes/iniciar-estudio-desde-historial-clases.md`](processes/iniciar-estudio-desde-historial-clases.md)
+  - [`syntheses/pack-llm-wiki-historial-clases.md`](syntheses/pack-llm-wiki-historial-clases.md)
+  - [`index.md`](index.md)
+  - [`log.md`](log.md)
+
+### Cambio
+
+Se actualizó el único submódulo de `origin/main`,
+`raw/sub_wiki/llm-wiki-historial-clases`, de `bb516ee` a
+`81c6fe553aa5bbf2c6d7856bbd0b7616e0af7050` (`docs: ingest Login pack into
+Atlas-Wiki`). No hubo choque de nombre con una copia `@subir_wiki`. La
+recompilación fue incremental: se conservó el conocimiento de HistorialClases e
+HistorialTutorias; se añadió Login (concepto, decisión de alcance, requisito
+padre, proceso de ingreso, tipo de usuario y flujo profesor) y se actualizó la
+ficha `wiki-pack`. Quedó visible, sin consenso fabricado, el conflicto de
+autenticación (cuerpo vs anexo vs LOGIN-03) y el choque con la sesión simulada
+de HC-07/HT-06.
+
+### Impacto
+
+Atlas-Wiki puede responder sobre Login además de las pantallas de historial.
+`CargarMaterialClase` y `Avatar` siguen solo nombradas. Los slices LOGIN-01 a
+LOGIN-06 se consultan en el submódulo.
+
+### Trazabilidad
+
+- Instrucción `@sincronizar` de la persona usuaria.
+- Rama remota de referencia: `origin/main`.
+- Slug tocado: `llm-wiki-historial-clases`.
+- [Pack llm-wiki-historial-clases](sources/llm-wiki-historial-clases.md),
+  evidencia E11-E17.
+
+## LOG-20260908-01 — Sincronización del submódulo llm-wiki-historial-clases
+
+- **Fecha:** 2026-09-08
+- **Tipos:** `source`, `knowledge`, `synthesis`, `navigation`, `conflict`
+- **Responsable:** Agente, bajo dirección de la persona usuaria
+- **Motivo:** Tarea `@sincronizar` contra la rama remota de seguimiento
+  `origin/main`.
+- **Archivos afectados:**
+  - [`sources/llm-wiki-historial-clases.md`](sources/llm-wiki-historial-clases.md)
+  - [`projects/avatar-apoyo-educativo-usach-virtual.md`](projects/avatar-apoyo-educativo-usach-virtual.md)
+  - [`organizations/usach-virtual.md`](organizations/usach-virtual.md)
+  - [`concepts/historial-clases.md`](concepts/historial-clases.md)
+  - [`concepts/historial-tutorias.md`](concepts/historial-tutorias.md)
+  - [`concepts/flujo-estudiante.md`](concepts/flujo-estudiante.md)
+  - [`decisions/alcance-iteracion-historial-clases.md`](decisions/alcance-iteracion-historial-clases.md)
+  - [`decisions/alcance-iteracion-historial-tutorias.md`](decisions/alcance-iteracion-historial-tutorias.md)
+  - [`requirements/historial-clases-pantalla.md`](requirements/historial-clases-pantalla.md)
+  - [`requirements/historial-tutorias-pantalla.md`](requirements/historial-tutorias-pantalla.md)
+  - [`processes/iniciar-estudio-desde-historial-clases.md`](processes/iniciar-estudio-desde-historial-clases.md)
+  - [`processes/consultar-historial-tutorias.md`](processes/consultar-historial-tutorias.md)
+  - [`syntheses/pack-llm-wiki-historial-clases.md`](syntheses/pack-llm-wiki-historial-clases.md)
+  - [`index.md`](index.md)
+  - [`log.md`](log.md)
+
+### Cambio
+
+Se actualizó el único submódulo de `origin/main`,
+`raw/sub_wiki/llm-wiki-historial-clases`, contra su rama remota `main`. El
+commit no cambió: ya estaba en `bb516ee43e499b3165d97da92f4aae3dc509cfcb`. No
+hubo choque de nombre con una copia `@subir_wiki`. La recompilación fue
+incremental y de primer ingreso: no existía ficha `wiki-pack` ni páginas
+derivadas. Se creó la ficha del pack y se extrajeron proyecto, organización,
+conceptos de pantalla y flujo, decisiones de alcance, requisitos padre,
+procesos de uso y una síntesis de lo compilado. No se copió el árbol del pack
+archivo por archivo; los slices y las síntesis operativas internas se consultan
+en el submódulo. Quedaron visibles los conflictos mock/API del pack.
+
+### Impacto
+
+Atlas-Wiki puede responder sobre HistorialClases e HistorialTutorias desde
+`wiki/`, con la ficha del pack como punto de entrada. El detalle de cada SPEC
+sigue en `raw/sub_wiki/llm-wiki-historial-clases/`. El índice interno del pack
+enumera AI Adoption, pero esas páginas no existen en el submódulo.
+
+### Trazabilidad
+
+- Instrucción `@sincronizar` de la persona usuaria.
+- Rama remota de referencia: `origin/main`.
+- Slug tocado: `llm-wiki-historial-clases`.
+- [Pack llm-wiki-historial-clases](sources/llm-wiki-historial-clases.md)
+
 ## LOG-20260902-02 — Carpetas de evidencia suelta en `raw/`
 
 - **Fecha:** 2026-09-02
