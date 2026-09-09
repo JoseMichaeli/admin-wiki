@@ -8,13 +8,9 @@ Este índice es la puerta de entrada a la wiki. Está diseñado para que una per
 un agente pueda comprender qué conocimiento existe, dónde encontrarlo y cómo se
 relaciona, sin tener que recorrer directamente el material original de `raw/`.
 
-> **Estado actual:** el pack compilado es
-> [llm-wiki-historial-clases](sources/llm-wiki-historial-clases.md)
-> (Avatar USACH Virtual: Login, HistorialClases e HistorialTutorias). El punto
-> de entrada operativo es la
-> [síntesis del pack](syntheses/pack-llm-wiki-historial-clases.md). El detalle
-> de cada slice vive en el submódulo
-> `raw/sub_wiki/llm-wiki-historial-clases/`.
+> **Estado actual:** estructura inicial. Las categorías de conocimiento están
+> vacías. `raw/` ya tiene carpetas para documentos, conversaciones, media,
+> datasets, other y wikis completas (`sub_wiki`).
 
 ## Cómo navegar la wiki
 
@@ -51,9 +47,7 @@ derivado.
 
 - Directorio: [`sources/`](sources/)
 - Esquema: [`../schemas/source.md`](../schemas/source.md)
-- Páginas disponibles:
-  - [Pack llm-wiki-historial-clases](sources/llm-wiki-historial-clases.md) —
-    wiki-pack del Avatar USACH Virtual (Login, HistorialClases e HistorialTutorias).
+- Páginas disponibles: ninguna todavía.
 
 ### Proyectos
 
@@ -63,10 +57,7 @@ requisitos, procesos y fuentes relacionadas.
 
 - Directorio: [`projects/`](projects/)
 - Esquema: [`../schemas/project.md`](../schemas/project.md)
-- Páginas disponibles:
-  - [Avatar de Apoyo Educativo USACH Virtual](projects/avatar-apoyo-educativo-usach-virtual.md)
-    — producto de apoyo educativo con avatar; el conocimiento compilado cubre
-    Login, HistorialClases e HistorialTutorias.
+- Páginas disponibles: ninguna todavía.
 
 ### Personas
 
@@ -85,9 +76,7 @@ conocimiento registrado.
 
 - Directorio: [`organizations/`](organizations/)
 - Esquema: [`../schemas/organization.md`](../schemas/organization.md)
-- Páginas disponibles:
-  - [USACH Virtual](organizations/usach-virtual.md) — identidad institucional
-    del encabezado de Login y del flujo estudiante.
+- Páginas disponibles: ninguna todavía.
 
 ### Decisiones
 
@@ -97,13 +86,7 @@ decidió, sino por qué.
 
 - Directorio: [`decisions/`](decisions/)
 - Esquema: [`../schemas/decision.md`](../schemas/decision.md)
-- Páginas disponibles:
-  - [Alcance de la iteración Login](decisions/alcance-iteracion-login.md)
-    — UI, captura y redirección por rol; autenticación real no unificada.
-  - [Alcance de la iteración HistorialClases](decisions/alcance-iteracion-historial-clases.md)
-    — mocks y navegación; sin RAG ni contexto académico real.
-  - [Alcance de la iteración HistorialTutorias](decisions/alcance-iteracion-historial-tutorias.md)
-    — historial mock, navegación real a Avatar, sin conversaciones persistidas.
+- Páginas disponibles: ninguna todavía.
 
 ### Requisitos
 
@@ -112,13 +95,7 @@ proceso debe satisfacer.
 
 - Directorio: [`requirements/`](requirements/)
 - Esquema: [`../schemas/requirement.md`](../schemas/requirement.md)
-- Páginas disponibles:
-  - [Pantalla Login del MVP Avatar USACH Virtual](requirements/login-pantalla.md)
-    — requisito padre; slices LOGIN-01 a LOGIN-06 en el pack.
-  - [Pantalla HistorialClases del flujo estudiante](requirements/historial-clases-pantalla.md)
-    — requisito padre; slices HC-01 a HC-10 en el pack.
-  - [Pantalla HistorialTutorias del flujo estudiante](requirements/historial-tutorias-pantalla.md)
-    — requisito padre; slices HT-01 a HT-08 en el pack.
+- Páginas disponibles: ninguna todavía.
 
 ### Conceptos
 
@@ -128,18 +105,7 @@ conceptos.
 
 - Directorio: [`concepts/`](concepts/)
 - Esquema: [`../schemas/concept.md`](../schemas/concept.md)
-- Páginas disponibles:
-  - [Login](concepts/login.md) — pantalla de entrada común del MVP.
-  - [Tipo de usuario](concepts/tipo-usuario.md) — discriminante `PROFESOR` /
-    `ESTUDIANTE` (nombres de contrato no unificados).
-  - [Flujo profesor](concepts/flujo-profesor.md) — Login → `CargarMaterialClase`
-    (esta última no especificada).
-  - [HistorialClases](concepts/historial-clases.md) — pantalla hub post-login
-    del estudiante.
-  - [HistorialTutorias](concepts/historial-tutorias.md) — historial de
-    sesiones y reapertura de Avatar.
-  - [Flujo estudiante](concepts/flujo-estudiante.md) — Login, HistorialClases,
-    Avatar, HistorialTutorias y Salir.
+- Páginas disponibles: ninguna todavía.
 
 ### Procesos
 
@@ -148,13 +114,7 @@ entradas, pasos, responsables, resultados y controles.
 
 - Directorio: [`processes/`](processes/)
 - Esquema: [`../schemas/process.md`](../schemas/process.md)
-- Páginas disponibles:
-  - [Ingresar al sistema desde Login](processes/ingresar-al-sistema-desde-login.md)
-    — recorrido hasta CargarMaterialClase o HistorialClases.
-  - [Iniciar estudio desde HistorialClases](processes/iniciar-estudio-desde-historial-clases.md)
-    — recorrido del estudiante hasta Avatar, tutorías o Login.
-  - [Consultar historial de tutorías](processes/consultar-historial-tutorias.md)
-    — recorrido del estudiante en HistorialTutorias.
+- Páginas disponibles: ninguna todavía.
 
 ### Síntesis
 
@@ -164,9 +124,7 @@ Una síntesis debe distinguir claramente evidencia e interpretación.
 
 - Directorio: [`syntheses/`](syntheses/)
 - Esquema: [`../schemas/synthesis.md`](../schemas/synthesis.md)
-- Páginas disponibles:
-  - [Conocimiento compilado del pack llm-wiki-historial-clases](syntheses/pack-llm-wiki-historial-clases.md)
-    — mapa de lo compilado, conflictos abiertos (incluye autenticación) y rutas al pack.
+- Páginas disponibles: ninguna todavía.
 
 ## Relaciones esperadas
 
